@@ -1,6 +1,19 @@
 package com.example.demo.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+    public Employee() {
+
+    }
+
+    @Id
+    @GeneratedValue
+    Long id;
 
     String name;
     int emp_id;
@@ -11,6 +24,14 @@ public class Employee {
         this.name = name;
         this.emp_id = emp_id;
         this.dept = dept;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
