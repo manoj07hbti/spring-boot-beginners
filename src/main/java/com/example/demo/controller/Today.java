@@ -14,6 +14,7 @@ import java.util.Optional;
 public class Today {
 
 @Autowired
+//Class_Name  var_name;
 EmployeeJpaRepository employeeJpaRepository;
 
 
@@ -87,6 +88,14 @@ EmployeeJpaRepository employeeJpaRepository;
     public List<Employee> display (){
         return employeeList;
 
+    }
+
+
+    public void test(){
+
+        employeeJpaRepository.findByName("name");
+       /* EmployeeJpaRepository employeeJpaRepository=new EmployeeJpaRepository();
+        employeeJpaRepository.findByName("name");*/
     }
 
 }

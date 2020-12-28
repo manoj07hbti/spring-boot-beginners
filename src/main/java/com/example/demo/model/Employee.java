@@ -5,14 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+@Entity // This will create employee table in database
 public class Employee {
     public Employee() {
 
     }
 
-    @Id
-    @GeneratedValue
+    @Id // primary key unique value
+    @GeneratedValue // Automatically increment current 0,1,2,3,......14,15
     Long id;
 
     String name;
