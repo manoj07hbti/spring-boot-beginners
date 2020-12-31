@@ -1,11 +1,12 @@
 package com.example.demo.model;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity // This will create employee table in database
+@Entity(name = "EMPLOYEE_TABLE") // This will create employee table in database
 public class Employee {
     public Employee() {
 
@@ -14,7 +15,7 @@ public class Employee {
     @Id // primary key unique value
     @GeneratedValue // Automatically increment current 0,1,2,3,......14,15
     Long id;
-
+    @Column(name="EMP_NAME")
     String name;
     int emp_id;
     String dept;
