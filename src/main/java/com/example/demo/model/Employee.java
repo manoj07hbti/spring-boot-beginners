@@ -6,18 +6,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name = "EMPLOYEE_TABLE") // This will create employee table in database
+@Entity(name = "EMPLOYEE_TABLE_23") // This will create employee table in database
 public class Employee {
+
+    // default constructor
     public Employee() {
 
     }
 
+
     @Id // primary key unique value
     @GeneratedValue // Automatically increment current 0,1,2,3,......14,15
+    //@Column(name="EMPLOYEE_ID")
     Long id;
-    @Column(name="EMP_NAME")
+    @Column(name="EMPLOYEE_NAME")
     String name;
+    @Column(name="EMPLOYEE_ID")
     int emp_id;
+    @Column(name="EMPLOYEE_DEPT")
     String dept;
 
     //parameterized constructor
