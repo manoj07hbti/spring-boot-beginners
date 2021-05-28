@@ -16,9 +16,6 @@ public class DatabaseController {
     @Autowired
 //Class_Name  var_name;
     EmployeeJpaRepository employeeJpaRepository;
-
-
-
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Employee> getAllEmployee() {
         return employeeJpaRepository.findAll();
@@ -34,7 +31,6 @@ public class DatabaseController {
         employeeJpaRepository.deleteById(id);
 
     }
-
     @RequestMapping(value = "/find_by_name/{name}", method = RequestMethod.GET)
     public Employee findEmployeeByName(@PathVariable String name) {
         System.out.println("Name is --->" + name);
