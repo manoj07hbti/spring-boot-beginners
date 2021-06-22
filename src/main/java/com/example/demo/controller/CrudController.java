@@ -18,7 +18,7 @@ public class CrudController {
     D- delete : remove resource*/
     List<EmployeeModel> employeeList=new ArrayList<>();
 
-    //create
+    //create ENDPOINT
     @RequestMapping("/add_emp")
     public String add(@RequestBody EmployeeModel employee){
 
